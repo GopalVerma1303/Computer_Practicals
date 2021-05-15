@@ -19,10 +19,10 @@ def bs(arr, low, high, x):
     if high>=low: midval = low+high//2
     if x==midval: return 0
     if x > midval: 
-        bs(arr, low+1 , high, x)
+        bs(arr, midval+1 , high, x)
         return (bs)
     if x < midval:
-        bs(arr, low, high-1, x)
+        bs(arr, low, midval-1, x)
         return (bs)
 findarr = input("enter the array to search: ")
 findchar = int(input("enter the char to find: "))
